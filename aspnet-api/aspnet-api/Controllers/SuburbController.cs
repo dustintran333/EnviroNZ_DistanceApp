@@ -15,17 +15,41 @@ public class SuburbController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult GetDistance(double latitude, double longitude)
+    [Route("CalculateNearestSuburb")]
+    public IActionResult CalculateNearestSuburb(Point Point)
     {
         // TODO: refactor using MediatR CQRS
-
         var content = FileHelper.ReadAllText("input.json");
-        var array = JsonSerializer.Deserialize<Suburb>(content);
-        Console.WriteLine(content);
+        var suburbList = JsonSerializer.Deserialize<Suburb[]>(content, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+        var nearestSuburb = suburbList!.MinBy(s => CalculateDistance(Point, new Point(s.Latitude, s.Longitude)));
 
+        return Ok(new DistanceResult(
+            Point, nearestSuburb, CalculateDistance(Point, nearestSuburb)));
 
-        return BadRequest("File upload failed");
+        // TODO: handle bad input
     }
+    
+    [HttpGet]
+    public IActionResult DistanceTest()
+    {
+        return CalculateNearestSuburb(new Point(0.2, 0.2));
+    }
+
+    // TODO: refactor
+    private static double CalculateDistance(Point point, Suburb suburb) => 
+        CalculateDistance(point, new Point(suburb.Latitude, suburb.Longitude));
+
+    private static double CalculateDistance(Point A, Point B) => 
+        Math.Sqrt(Math.Pow(A.Latitude - B.Latitude, 2) + Math.Pow(A.Longitude- B.Longitude, 2));
 }
 
-record Suburb(int Id, string SuburbName, double Latitude, double Longitude);
+public record Point(double Latitude, double Longitude);
+
+public record Suburb(
+    int Id,
+    string SuburbName,
+    double Latitude,
+    double Longitude
+);
+
+public record DistanceResult(Point Point, Suburb Suburb, double distance);
