@@ -5,10 +5,13 @@
 
 /.vs/VSWorkspaceState.json
 
-/aspnet-api/.vs/*
+/aspnet-api/.vs/
 
-/aspnet-api/aspnet-api/bin/*
+/aspnet-api/aspnet-api/bin/
 
-/aspnet-api/aspnet-api/obj/*
-/.vs/EnviroNZ_Test/v17/.wsuo
-/.vs/slnx.sqlite
+/aspnet-api/aspnet-api/obj/
+
+/.vs/
+
+/aspnet-api/aspnet-api/obj/
+/aspnet-api/aspnet-api/obj/Debug/net6.0/aspnet-api.AssemblyInfo.cs
