@@ -18,15 +18,16 @@ public class SuburbController : ControllerBase
     [Route("CalculateNearestSuburb")]
     public IActionResult CalculateNearestSuburb(Point Point)
     {
-        // TODO: refactor using MediatR CQRS
+        // TODO: refactor CQRS
+        // TODO: handle bad input
+        
         var content = FileHelper.ReadAllText("input.json");
         var suburbList = JsonSerializer.Deserialize<Suburb[]>(content, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+
         var nearestSuburb = suburbList!.MinBy(s => CalculateDistance(Point, new Point(s.Latitude, s.Longitude)));
 
         return Ok(new DistanceResult(
             Point, nearestSuburb, CalculateDistance(Point, nearestSuburb)));
-
-        // TODO: handle bad input
     }
     
     [HttpGet]
@@ -52,4 +53,4 @@ public record Suburb(
     double Longitude
 );
 
-public record DistanceResult(Point Point, Suburb Suburb, double distance);
+public record DistanceResult(Point Point, Suburb Suburb, double Distance);
