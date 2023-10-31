@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "suburbName": "Arch Hill",
+    "latitude": -36.8659669,
+    "longitude": 174.7148012
+  },
+  {
+    "id": 2,
+    "suburbName": "Auckland CBD",
+    "latitude": -36.859454,
+    "longitude": 174.5660387
+  },
+  {
+    "id": 3,
+    "suburbName": "Avondale",
+    "latitude": -36.8852381,
+    "longitude": 174.6649163
+  },
+  {
+    "id": 4,
+    "suburbName": "Balmoral",
+    "latitude": -36.8976578,
+    "longitude": 174.7250972
+  },
+  {
+    "id": 5,
+    "suburbName": "Birkenhead",
+    "latitude": -36.8120427,
+    "longitude": 174.7260381
+  },
+  {
+    "id": 6,
+    "suburbName": "Blockhouse Bay",
+    "latitude": -36.9262628,
+    "longitude": 174.7000563
+  },
+  {
+    "id": 7,
+    "suburbName": "Botany Downs",
+    "latitude": -36.9228705,
+    "longitude": 174.9154983
+  },
+  {
+    "id": 8,
+    "suburbName": "Ellerslie",
+    "latitude": -36.8922751,
+    "longitude": 174.8077355
+  },
+  {
+    "id": 9,
+    "suburbName": "Epsom",
+    "latitude": -36.8904851,
+    "longitude": 174.7721629
+  },
+  {
+    "id": 10,
+    "suburbName": "Freemans Bay",
+    "latitude": -36.8473856,
+    "longitude": 174.7484948
+  },
+  {
+    "id": 11,
+    "suburbName": "Glen Eden",
+    "latitude": -36.9073821,
+    "longitude": 174.6540207
+  },
+  {
+    "id": 12,
+    "suburbName": "Glendowie",
+    "latitude": -36.8562427,
+    "longitude": 174.8603797
+  },
+  {
+    "id": 13,
+    "suburbName": "Glen Innes",
+    "latitude": -36.8746129,
+    "longitude": 174.867097
+  },
+  {
+    "id": 14,
+    "suburbName": "Greenlane",
+    "latitude": -36.9056422,
+    "longitude": 174.7936316
+  },
+  {
+    "id": 15,
+    "suburbName": "Grey Lynn",
+    "latitude": -36.8578676,
+    "longitude": 174.7346636
+  },
+  {
+    "id": 16,
+    "suburbName": "Helensville",
+    "latitude": -36.6758295,
+    "longitude": 174.4549806
+  },
+  {
+    "id": 17,
+    "suburbName": "Henderson",
+    "latitude": -36.8780201,
+    "longitude": 174.6297256
+  },
+  {
+    "id": 18,
+    "suburbName": "Hillsborough",
+    "latitude": -36.910192,
+    "longitude": 174.7615561
+  },
+  {
+    "id": 19,
+    "suburbName": "Hobsonville",
+    "latitude": -36.8106112,
+    "longitude": 174.6122461
+  },
+  {
+    "id": 20,
+    "suburbName": "Howick",
+    "latitude": -36.8921132,
+    "longitude": 174.9276323
+  },
+  {
+    "id": 21,
+    "suburbName": "Kingsland",
+    "latitude": -36.8701045,
+    "longitude": 174.7468094
+  },
+  {
+    "id": 22,
+    "suburbName": "Kohimarama",
+    "latitude": -36.8484597,
+    "longitude": 174.8300028
+  },
+  {
+    "id": 23,
+    "suburbName": "Lynfield",
+    "latitude": -36.9221502,
+    "longitude": 174.7362421
+  },
+  {
+    "id": 24,
+    "suburbName": "Manukau",
+    "latitude": -36.9928233,
+    "longitude": 174.8840329
+  },
+  {
+    "id": 25,
+    "suburbName": "Manurewa",
+    "latitude": -37.0201001,
+    "longitude": 174.9044646
+  },
+  {
+    "id": 26,
+    "suburbName": "Massey",
+    "latitude": -36.8332165,
+    "longitude": 174.6023569
+  },
+  {
+    "id": 27,
+    "suburbName": "Meadowbank",
+    "latitude": -36.8746629,
+    "longitude": 174.8457256
+  },
+  {
+    "id": 28,
+    "suburbName": "Milford",
+    "latitude": -36.7701083,
+    "longitude": 174.7468292
+  },
+  {
+    "id": 29,
+    "suburbName": "Mission Bay",
+    "latitude": -36.8473856,
+    "longitude": 174.8291591
+  },
+  {
+    "id": 30,
+    "suburbName": "Morningside",
+    "latitude": -36.8730933,
+    "longitude": 174.7346636
+  }
+]

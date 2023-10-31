@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+
+/.vs/VSWorkspaceState.json
+
+/aspnet-api/.vs/*
+
+/aspnet-api/aspnet-api/bin/*
+
+/aspnet-api/aspnet-api/obj/*
+/.vs/EnviroNZ_Test/v17/.wsuo
+/.vs/slnx.sqlite
