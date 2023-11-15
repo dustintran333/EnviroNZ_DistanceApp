@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using FileHelper = System.IO.File;
+
 namespace aspnet_api.Controllers;
 
 [ApiController]
@@ -20,16 +21,17 @@ public class SuburbController : ControllerBase
     {
         // TODO: refactor CQRS
         // TODO: handle bad input
-        
+
         var content = FileHelper.ReadAllText("input.json");
-        var suburbList = JsonSerializer.Deserialize<Suburb[]>(content, new JsonSerializerOptions(JsonSerializerDefaults.Web));
+        var suburbList =
+            JsonSerializer.Deserialize<Suburb[]>(content, new JsonSerializerOptions(JsonSerializerDefaults.Web));
 
         var nearestSuburb = suburbList!.MinBy(s => CalculateDistance(Point, new Point(s.Latitude, s.Longitude)));
 
         return Ok(new DistanceResult(
             Point, nearestSuburb, CalculateDistance(Point, nearestSuburb)));
     }
-    
+
     [HttpGet]
     public IActionResult DistanceTest()
     {
@@ -37,11 +39,11 @@ public class SuburbController : ControllerBase
     }
 
     // TODO: refactor
-    private static double CalculateDistance(Point point, Suburb suburb) => 
+    private static double CalculateDistance(Point point, Suburb suburb) =>
         CalculateDistance(point, new Point(suburb.Latitude, suburb.Longitude));
 
-    private static double CalculateDistance(Point A, Point B) => 
-        Math.Sqrt(Math.Pow(A.Latitude - B.Latitude, 2) + Math.Pow(A.Longitude- B.Longitude, 2));
+    private static double CalculateDistance(Point a, Point b) =>
+        Math.Sqrt(Math.Pow(a.Latitude - b.Latitude, 2) + Math.Pow(a.Longitude - b.Longitude, 2));
 }
 
 public record Point(double Latitude, double Longitude);
