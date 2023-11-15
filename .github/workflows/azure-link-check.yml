@@ -11,14 +11,18 @@ jobs:
       # - name: Checkout code
       #   uses: actions/checkout@v2
 
-      - name: Check for Azure Board Link
-        run: |
-          PR_DESCRIPTION=$(gh pr view ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --json body -q .body)
-          if [[ $PR_DESCRIPTION == *"dev.azure.com"* ]]; then
-            echo "Azure Board link found in PR."
-          else
-            echo "No Azure Board link found in PR."
-            exit 1
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Check for Azure Board Link
+      #   run: |
+      #     PR_DESCRIPTION=$(gh pr view ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --json body -q .body)
+      #     if [[ $PR_DESCRIPTION == *"dev.azure.com"* ]]; then
+      #       echo "Azure Board link found in PR."
+      #     else
+      #       echo "No Azure Board link found in PR."
+      #       exit 1
+      #     fi
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Azure DevOps Work Item linker
+        uses: solidify/github-action-azdo-link@v0.9.2
+            
